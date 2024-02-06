@@ -1,0 +1,123 @@
+:root {
+    --border-radius : 0px;
+    --padding : 5px 10px;
+    --margine : 5px 10px;
+
+    --scale : 1.05;
+    --animation-transition : 200ms;
+
+    --dark-color : rgb(0, 0, 0);
+    --mid-dark-color : rgb(90, 40, 140);
+    --mid-color : rgb(30, 120, 150);
+    --mid-bright-color : rgb(150, 200, 200);
+    --bright-color : rgb(255, 255, 150);
+    
+    --font-color : var(--dark-color);
+
+    --text-font-family : 'Franklin Gothic Medium';
+    --hedder-font-family : 'Courier New';
+    
+    --letter-spacing : 1.5px;
+    
+    --hedder-font-size : 300%;
+    --title-font-size : 240%;
+    --label-font-size : 180%;
+    --font-size : 150%;
+}
+
+html {
+    scroll-behavior: smooth;
+    
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: var(--mid-color);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+
+    display: flexbox;
+    padding: 0%;
+    margin: 0%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+#nav-bar {
+    background-color: var(--mid-dark-color);
+    border-radius: var(--border-radius);
+    
+    display: flexbox;
+    position: fixed;
+    padding: var(--padding);
+    width: 100%;
+
+    z-index: 100;
+}
+
+#nav-bar a {
+    transition: var(--animation-transition);
+    font-family: var(--hedder-font-family);
+    color: var(--font-color);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--hedder-font-size);
+    
+    padding: var(--padding);
+    margin: var(--margine);
+    display: inline-flex;
+}
+
+#nav-bar a:hover {
+    background-color: var(--bright-color);
+
+    transform: scale(var(--scale));
+    -ms-transform: scale(var(--scale));
+    -webkit-transform: scale(var(--scale));
+}
+
+
+
+.activ {
+    background-color: var(--mid-bright-color);
+}
+
+.container {
+    background-color: var(--mid-bright-color);
+
+    display: inline;
+    position: absolute;
+    padding-top: 40px;
+    margin: 2.5%;
+    width: 95%;
+}
+
+.container h1, h2, h3, p {
+    padding: 0px 10%;
+    font-family: var(--hedder-font-family);
+}
+
+.container h1 {
+    font-size: var(--hedder-font-size);
+}
+.container h2 {
+    font-size: var(--title-font-size);
+}
+.container h3 {
+    font-size: var(--label-font-size);
+}
+.container p {
+    font-family: var(--text-font-family);
+    font-size: var(--font-size);
+    letter-spacing: var(--letter-spacing);
+}
